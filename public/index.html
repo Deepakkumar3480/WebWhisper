@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+
+    <title>Webwhispers : Online Conversion</title>
+  </head>
+  <body class="bg-body">
+    <div class="bg-image"></div>
+    <div class="join-container">
+      <header class="join-header">
+        <img
+          class="logo"
+          src="images/logo.svg"
+          alt="logo"
+          srcset="images/logo.svg"
+        />
+        <h1 class="logo-title">Webwhispers</h1>
+      </header>
+
+      <main class="join-main">
+        <section class="description">
+          <h3>Anytime-Anywhere</h3>
+          <p>Your Online realtime chat app</p>
+        </section>
+
+        <form class="join-form" action="chatbox.html">
+          <div class="form-control">
+            <label for="username">Username <span class="astrik">*</span></label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter username..."
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="room">Room <span class="astrik">*</span></label>
+            <input
+              type="text"
+              name="room"
+              id="room"
+              placeholder="Enter room name"
+              required
+            />
+          </div>
+          <button type="submit" class="join-button">Join Room</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

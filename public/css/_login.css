@@ -1,0 +1,168 @@
+.bg-image {
+  display: none;
+}
+
+.join-container {
+  width: var(--size-full);
+  height: var(--size-full);
+  background-color: var(--dark);
+}
+
+.join-header {
+  display: flex;
+  align-items: center;
+  width: var(--size-full);
+  justify-content: center;
+  height: var(--size-16);
+  gap: var(--size-4);
+}
+
+.logo {
+  width: var(--size-8);
+  height: var(--size-8);
+}
+
+.logo-title {
+  color: var(--light);
+  /* text-transform: lowercase; */
+  font-size: var(--text-xl);
+}
+
+.join-main {
+  padding: var(--size-4);
+  height: calc(var(--height-screen) - var(--size-4) - var(--size-16));
+}
+
+.description {
+  text-align: center;
+  margin-bottom: var(--size-6);
+}
+
+.description h3 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+}
+
+.description p {
+  font-size: var(--text-sm);
+  opacity: 70%;
+  text-transform: lowercase;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4);
+  height: calc(var(--size-full) - var(--size-16));
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+}
+
+.form-control label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  opacity: 80%;
+  text-transform: capitalize;
+}
+
+.astrik {
+  color: var(--primary);
+}
+
+.form-control input,
+.form-control select {
+  height: var(--size-12);
+  padding: var(--size-2);
+  border-radius: var(--size-2);
+  font-size: var(--text-base);
+  border: var(--size-px) solid var(--light);
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.join-button {
+  height: var(--size-12);
+  padding: var(--size-2);
+  border-radius: var(--size-2);
+  font-size: var(--text-base);
+  border: 0;
+  background-color: var(--primary);
+  color: var(--light);
+  outline: none;
+  appearance: none;
+  box-shadow: 0 10px 20px -10px rgba(240, 98, 98, 0.5);
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.join-button:hover,
+.join-button:focus {
+  box-shadow: 0 20px 20px -10px rgba(240, 98, 98, 0.5);
+  transform: translateY(-5px);
+}
+
+@media only screen and (min-width: 480px) {
+  .bg-image {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: var(--size-full);
+    height: var(--size-full);
+    z-index: -1;
+    background: url("../images/3d-bg.jpeg") repeat top;
+    background-size: cover;
+    background-blend-mode: multiply;
+    filter: blur(8px);
+  }
+
+  .join-container {
+    z-index: 100;
+    width: 70%;
+    height: auto;
+    padding: var(--size-6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--size-4);
+    box-shadow: 0 20px 20px -10px rgba(34, 34, 34, 0.5);
+  }
+
+  .join-main,
+  .join-form {
+    height: auto;
+  }
+
+  .join-button {
+    margin-top: var(--size-2);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .join-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .join-header,
+  .join-main {
+    flex: 1;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    width: var(--size-16);
+    height: var(--size-16);
+  }
+
+  .logo-title {
+    font-size: var(--text-3xl);
+  }
+}

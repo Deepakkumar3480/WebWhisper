@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+
+    <title>Webwhispers : Online Conversion</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.min.js"
+      integrity="sha512-/l6vieC+YxaZywUhmqs++8uF9DeMvJE61ua5g+UK0TuHZ4TkTgB1Gm1n0NiA86uEOM9JJ6JUwyR0hboKO0fCng=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h2 id="room-name" class="room-name"></h2>
+
+        <nav class="nav">
+          <div class="users-nav" data-toggle="false">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+
+          <a href="index.html" class="leave-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span class="leave-button-text">Leave</span>
+          </a>
+        </nav>
+      </header>
+
+      <main class="chat-main">
+        <div class="chat-sidebar">
+          <h3>Users</h3>
+          <ul id="users"></ul>
+        </div>
+
+        <section class="chat-section">
+          <div class="chat-messages"></div>
+
+          <div class="chat-form-container">
+            <form id="chat-form">
+              <input
+                id="msg"
+                type="text"
+                placeholder="Message"
+                required
+                autocomplete="off"
+              />
+              <button class="send-button">
+                <svg
+                  viewBox="0 0 35 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="currentColor"
+                >
+                  <path d="M31.745 17.8714H16.1886" />
+                  <path
+                    d="M31.7457 17.8716L12.6538 27.064L16.1893 17.8716L12.6538 8.67924L31.7457 17.8716Z"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
