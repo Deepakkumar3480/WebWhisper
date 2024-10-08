@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const http = require("http");
 const socketio = require("socket.io");
+const dotenv = require('dotenv');
+dotenv.config();
 const formatMessage = require("./utils/messages");
 const {
   userJoin,
@@ -9,8 +11,6 @@ const {
   userLeave,
   getRoomUsers,
 } = require("./utils/users");
-
-const PORT = 8080 || process.env.PORT;
 
 const app = express();
 const server = http.createServer(app);
@@ -76,4 +76,7 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(PORT, () => console.log(`App is listening on port: ${PORT}`));
+server.listen(process.env.PORT,
+  //  () => 
+  // console.log(`App is listening on port: ${process.env.PORT}`)
+);
